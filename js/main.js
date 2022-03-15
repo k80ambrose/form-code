@@ -1,14 +1,6 @@
-function setup() {
-  createCanvas(innerWidth, innerHeight)
-  background(0)
-  let x = width / 2
-  let y = height / 2
-  let r = width / 4
-  ellipse(x, y, r)
-}
-osc(4, 0.042, 0.481)
-	.color(1.17, 0.387, -1.1)
-	.rotate(0.30, 0.1)
-	.pixelate(0.076, 20)
-	.modulate(noise(2.5), () => 1.5 * Math.sin(0.08 * time))
+osc(7.044, 0.042, 0.471)
+	.color(1.17, 0.76, -1.1)
+	.rotate(0.90, 0.124)
+	.pixelate(8.76, 22.063)
+	.modulate(noise(5.09), () => 0.5 * Math.sin(0.08 * time))
 	.out(o0);

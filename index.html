@@ -3,20 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
-    <title>Form+Code</title>
-    <meta name="description" content="experimenting with forms && code">
-    <meta name="author" content="Nick Briz">
-
-    <meta name="og:title" content="Form+Code">
-    <meta name="og:description" content="experimenting with forms && code">
-    <meta name="og:image" content="images/favicon.png">
-    <meta name="og:site_name" content="Form+Code">
+    <link rel="icon" type="image/png" href="images/Teal Orb.ico">
+    <title>blobs of joy</title>
+    <meta name="description" content="experimenting with forms & code">
+    <meta name="author" content="k80">
     <meta name="og:url" content="https://net-art-uchicago.github.io/form-code/">
-
+    <script src="https://unpkg.com/hydra-synth"></script>
   </head>
   <body>
+    <h1>blobs of joy</h1>
+    <div class="codeblock">
+      <code>osc(7.044, 0.042, 0.471)
+      	.color(1.17, 0.76, -1.1)
+      	.rotate(0.90, 0.124)
+      	.pixelate(8.76, 22.063)
+      	.modulate(noise(5.09), () => 0.5 * Math.sin(0.08 * time))
+      	.out(o0);</code>
+        <div class="placeholder" style="width: 512px; height: 512px; left: 50%; position: relative; transform: translate(-50%, 0%);">
+          <canvas width="512" height="512" id="hydraCanvas"></canvas>
+        </div>
+    </div>
     <script src="js/p5.js"></script>
     <script src="js/main.js"></script>
   </body>
