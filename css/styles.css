@@ -5,11 +5,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  cursor: crosshair;
+  cursor: none;
 }
 
 h1 {
   font-family: monospace;
+  background-color: transparent;
 }
 canvas {
   display: block;

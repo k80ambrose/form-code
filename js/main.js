@@ -1,36 +1,29 @@
-<style>
-  body {
-    margin: 0;
-  }
-</style>
-<body>
-
-  <canvas id="hydra-canvas"></canvas>
-
-  <script src="https://unpkg.com/hydra-synth"></script>
-  <script>
-    /* global Hydra, osc, noise, o0, time */
-
-    const canvas = document.querySelector('#hydra-canvas')
+const canvas = document.querySelector('#hydra-canvas')
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    new Hydra({
-      canvas: canvas,
-      detectAudio: false,
-      enableStreamCapture: false,
-      width: canvas.width,
-      height: canvas.height
-    })
+      new Hydra({
+        canvas: canvas,
+        detectAudio: false,
+        enableStreamCapture: false,
+        width: canvas.width,
+        height: canvas.height
+      })
 
-    // by Olivia Jack
-    // https://ojack.github.io
-    osc(4, 0.042, 0.481)
-      .color(1.17, 0.387, -1.1)
-      .rotate(0.30, 0.1)
-      .pixelate(0.076, 20)
-      .modulate(noise(2.5), () => 1.5 * Math.sin(0.08 * time))
-      .out(o0)
+      var clicks = 0;
+      function onClick () {
+        clicks += 1;
+      }
 
-  </script>
-</body>
+      var x = MouseEvent.clientX;
+      var y = MouseEvent.clientY;
+
+      osc(1, 0.42, 0.7)
+        .color((Math.random() - Math.sin(0.03 * time)), (Math.random() + Math.sin(0.08 * time)),(Math.random()))
+        .rotate(0.90, 0.1)
+        .pixelate(4, 4)
+        .modulate(noise(3), () => (1.5 + clicks) * Math.sin(0.03 * time))
+        .out(o0)
+
+        // by Olivia Jack
+        // https://ojack.github.io

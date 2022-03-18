@@ -2,49 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/orb.ico">
-    <title>blobs of joy</title>
     <meta name="description" content="experimenting with forms & code">
     <meta name="author" content="k80">
     <meta name="og:url" content="https://net-art-uchicago.github.io/form-code/">
-    <script src="https://unpkg.com/hydra-synth"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/goldblob.ico">
+    <title>blobs of joy</title>
   </head>
+
   <body onClick="onClick()">
-    <h1>blobs of joy</h1>
+    <h1>&nbsp;&nbsp;blobs of joy</h1>
     <canvas id="hydra-canvas"></canvas>
     <script src="https://unpkg.com/hydra-synth"></script>
-    <script>
-      /* global Hydra, osc, noise, o0, time */
-
-      const canvas = document.querySelector('#hydra-canvas')
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-
-      new Hydra({
-        canvas: canvas,
-        detectAudio: false,
-        enableStreamCapture: false,
-        width: canvas.width,
-        height: canvas.height
-      })
-
-      var clicks = 0;
-      function onClick () {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-      }
-
-
-      osc(0.8, 0.8, 20)
-        .color(1.02, 0.5, 1.34)
-        .rotate(0.90, 0.1)
-        .pixelate(0.076, 5)
-        .modulate(noise(7), () => (1.5 + clicks) * Math.sin(0.04 * time))
-        .out(o0)
-
-        // by Olivia Jack
-        // https://ojack.github.io
-
-    </script>
+    <script src="js/main.js"></script>
   </body>
