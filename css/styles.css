@@ -11,6 +11,9 @@ html, body {
 h1 {
   font-family: monospace;
   background-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 canvas {
   display: block;
