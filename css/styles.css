@@ -10,10 +10,16 @@ html, body {
 
 h1 {
   font-family: monospace;
+  font-size: 30px;
+  font-weight: 400;
   background-color: transparent;
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  position: absolute;
+  padding-top:10px;
+  padding-left: 10px;
+
 }
 canvas {
   display: block;
