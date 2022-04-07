@@ -18,8 +18,9 @@
   document.body.onkeyup = function(e){
       if(e.keyCode == 32){
         location.reload();
-  }}
+  }
 
+  }}
   osc(1, 0.42, 0.7)
     .color((Math.random() - Math.sin(0.03 * time)), (Math.random() + Math.tan(0.08 * time)),(Math.random()), 0.5)
     .rotate(0.90, 0.1)
@@ -29,3 +30,8 @@
 
   // by Olivia Jack
   // https://ojack.github.io
+
+  document.body.onkeyup = function(e){
+      if(e.keyCode == 74){
+        osc.rotate() * 7;
+  }}
