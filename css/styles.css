@@ -25,18 +25,38 @@ h1 {
   opacity: 1; 
 }
 
+h2 {
+  font-family: "Rock 3D", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
+
+p {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
 #info-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
   cursor: pointer;
   z-index: 1000;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
 }
 
 #popup-message {
-  display: none; /* Keep it hidden until the icon is clicked */
+  display: none; 
   position: fixed;
   top: 50%;
   left: 50%;
@@ -44,13 +64,10 @@ h1 {
   background-color: rgba(211, 211, 211, 0.041);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.634);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.193);
   z-index: 2; 
   width: 50vw;
   text-align: center;
-  font-family: "Zen Maru Gothic", serif;;
-  font-weight: 600;
-  font-style: normal;
 }
 
 .zen-maru gothic-regular {
