@@ -2,29 +2,25 @@
   box-sizing: border-box;
 }
 
-
 html, body {
   margin: 0;
   padding: 0;
   cursor: none;
 }
 
-h1 {
-  font-family: monospace;
-  font-size: 30px;
-  font-weight: 400;
-  background-color: transparent;
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  position: absolute;
-  padding-top:10px;
-  padding-left: 10px;
-
-}
 canvas {
   display: flex;
   z-index: 1;
+}
+
+h1 {
+  font-family: "Rock 3D", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  position: absolute;
+  padding-top:10px;
+  padding-left: 80px;
 }
 
 #info-icon {
@@ -36,7 +32,6 @@ canvas {
   height: 40px;
   width: 40px;
 }
-
 
 #popup-message {
   display: none; /* Keep it hidden until the icon is clicked */

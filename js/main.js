@@ -30,6 +30,16 @@
   // by Olivia Jack
   // https://ojack.github.io
 
+  window.onload = function() {
+    setTimeout(function() {
+      var h1 = document.querySelector('h1'); // Selects the first <h1> element
+      if (h1) {
+        h1.style.display = 'none'; // Makes the <h1> element disappear
+      }
+    }, 5000); // 5000 milliseconds = 5 seconds
+  };
+  
+
   document.querySelector('#info-icon').addEventListener('click', function() {
     document.querySelector('#popup-message').style.display = 'block';
   });
