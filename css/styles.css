@@ -24,4 +24,21 @@ h1 {
 }
 canvas {
   display: flex;
+  z-index: 1;
+}
+
+#info-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  height: 40px;
+  width: 40px;
+}
+
+
+/* Additional styles for the popup, if needed */
+#popup-message {
+  z-index: 1000;
 }

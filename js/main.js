@@ -29,3 +29,16 @@
 
   // by Olivia Jack
   // https://ojack.github.io
+
+  document.querySelector('#info-icon').addEventListener('click', function() {
+    document.querySelector('#popup-message').style.display = 'block';
+  });
+  
+  document.addEventListener('click', function(e) {
+    var infoIcon = document.querySelector('#info-icon');
+    var popupMessage = document.querySelector('#popup-message');
+    if (!infoIcon.contains(e.target) && !popupMessage.contains(e.target)) {
+      popupMessage.style.display = 'none';
+    }
+  });
+  
