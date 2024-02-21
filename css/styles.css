@@ -38,7 +38,26 @@ canvas {
 }
 
 
-/* Additional styles for the popup, if needed */
 #popup-message {
-  z-index: 1000;
+  display: none; /* Keep it hidden until the icon is clicked */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(211, 211, 211, 0.041);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.634);
+  z-index: 2; 
+  width: 50vw;
+  text-align: center;
+  font-family: "Zen Maru Gothic", serif;;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.zen-maru gothic-regular {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
 }
