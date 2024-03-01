@@ -41,15 +41,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Fade out <h1> after 5 seconds
+  // Initiate fade-in for <h1>
+  var h1 = document.querySelector('h1');
+  if (h1) {
+    h1.style.opacity = '1'; // Start fade-in
+    h1.style.transition = 'opacity 2s ease-out'; // Set transition for fade-in
+  }
+
+  // Fade out <h1> after 7 seconds (2s for fade in + 5s wait)
   setTimeout(function() {
-    var h1 = document.querySelector('h1');
     if (h1) {
-      h1.style.opacity = '0'; // Start fade out
+      h1.style.opacity = '0'; // Start fade-out
+      h1.style.transition = 'opacity 5s ease-out'; // Adjust transition for fade-out
+
       // Optional: Remove the element from document flow after fade-out
       setTimeout(function() {
         h1.style.display = 'none';
-      }, 2000); // Match the duration of the opacity transition
+      }, 5000); // Wait for fade-out to complete
     }
-  }, 5000);
+  }, 7000); // Total wait time before starting fade-out
 });
